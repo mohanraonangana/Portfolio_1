@@ -63,7 +63,7 @@ const Certifications = () => {
             transition={{ delay: 0.3 }}
             className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto"
           >
-            Industry-recognized certifications demonstrating expertise and commitment to professional growth
+            Certifications and badges I’m pursuing or recently completed to grow my skills
           </motion.p>
         </div>
 

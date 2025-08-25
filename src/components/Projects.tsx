@@ -58,8 +58,10 @@ const Projects = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="min-h-screen pt-24 pb-12"
+      className="min-h-screen pt-24 pb-12 relative overflow-hidden"
     >
+      <div aria-hidden className="bg-gradient-orb" />
+      <div aria-hidden className="absolute inset-0 bg-animated-grid" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <motion.h2
@@ -76,7 +78,7 @@ const Projects = () => {
             transition={{ delay: 0.3 }}
             className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto"
           >
-            Showcasing my technical expertise through real-world applications
+            Small practice projects to strengthen fundamentals and learn by doing
           </motion.p>
         </div>
 

@@ -30,8 +30,10 @@ const Skills = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="min-h-screen pt-24 pb-12"
+      className="min-h-screen pt-24 pb-12 relative overflow-hidden"
     >
+      <div aria-hidden className="bg-gradient-orb" />
+      <div aria-hidden className="absolute inset-0 bg-animated-grid" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <motion.h2
@@ -48,7 +50,7 @@ const Skills = () => {
             transition={{ delay: 0.3 }}
             className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto"
           >
-            My expertise in various technologies and tools
+            Technologies I’m learning and practicing right now
           </motion.p>
         </div>
 
@@ -59,8 +61,9 @@ const Skills = () => {
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className="bg-card rounded-lg shadow-lg overflow-hidden"
+                transition={{ delay: 0.2 + index * 0.05 }}
+                whileHover={{ y: -4 }}
+                className="bg-card rounded-lg border border-border overflow-hidden"
               >
                 <div className="px-6 py-8">
                   <div className="flex items-center gap-4 mb-6">
@@ -71,12 +74,13 @@ const Skills = () => {
                   </div>
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill) => (
-                      <span
+                      <motion.span
                         key={skill}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary"
+                        whileHover={{ scale: 1.05 }}
+                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20"
                       >
                         {skill}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </div>
