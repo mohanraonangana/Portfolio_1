@@ -13,7 +13,8 @@ const Projects = () => {
         'Analytics dashboard for placement statistics',
         'Resume builder and management',
       ],
-      github: 'https://github.com/Mohanrao1319/placement-management',
+
+      github: 'https://github.com/mohanraonangana/Job-Portal.git',
     },
     {
       title: 'Seafood Export-Import Website',
@@ -25,7 +26,7 @@ const Projects = () => {
         'Inventory management',
         'Payment gateway integration',
       ],
-      github: 'https://github.com/Mohanrao1319/seafood-export',
+      github: 'https://github.com/mohanraonangana/NklSeafoods1.git',
     },
     {
       title: 'Health & Nutrient Management System',
